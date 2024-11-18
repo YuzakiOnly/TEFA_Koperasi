@@ -1,12 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Koperasi SMKN 1 Banyuwangi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Custom scrollbar for webkit browsers */
+    .scroll-container::-webkit-scrollbar {
+        height: 8px;
+    }
+    .scroll-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    .scroll-container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+    .scroll-container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>
+
 <body>
-    <h1 class="text-3xl font-bold underline">Cihuy</h1>
+    <!-- Top Info Bar -->
+    <div class="bg-blue-700 text-white py-2">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center">
+                    <i data-feather="phone" class="w-4 h-4 mr-1"></i>
+                    (0333)-424541
+                </span>
+                <span class="flex items-center">
+                    <i data-feather="mail" class="w-4 h-4 mr-1"></i>
+                    smkn1bwi_wk46@yahoo.co.id
+                </span>
+            </div>
+            <div class="flex items-center">
+                <span class="flex items-center">
+                    <i data-feather="clock" class="w-4 h-4 mr-1"></i>
+                    Senin-Jumat: 07:00 - 15:00
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 ">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/id/thumb/d/d1/Smkn1bwi.jpg/800px-Smkn1bwi.jpg"
+                        alt="Logo SMKN 1 Banyuwangi" class="h-10 w-10 mr-2">
+                    <div>
+                        <h1 class="text-lg font-bold text-blue-900">Koperasi</h1>
+                        <p class="text-sm text-gray-600">SMKN 1 Banyuwangi</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-900">BERANDA</a>
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-blue-900">
+                            PRODUK
+                            <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg py-2 mt-2">
+                            <a href="product.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">BUKU
+                                PELAJARAN</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">ALAT TULIS</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">SERAGAM SEKOLAH</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">ATRIBUT SEKOLAH</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">KONSUMSI</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">MERCHANDISE</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-blue-900">PROFIL</a>
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-blue-900">
+                            LAINNYA
+                            <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg py-2 mt-2">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">GALLERY</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">KONTAK KAMI</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" id="mobile-menu-button">
+                    <i data-feather="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden " id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">BERANDA</a>
+
+                    <div class="relative">
+                        <button id="products-button"
+                            class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50">
+                            PRODUK
+                        </button>
+                        <div id="products-dropdown"
+                            class="hidden absolute left-0 w-full bg-white shadow-md mt-1 rounded-md z-10">
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Buku Pelajaran</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Alat Tulis</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Seragam Sekolah</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Atribut Sekolah</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Konsumsi</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Merchandise</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">PROFIL</a>
+
+                    <div class="relative">
+                        <button id="lainnya-button"
+                            class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50">
+                            LAINNYA
+                        </button>
+                        <div id="lainnya-dropdown"
+                            class="hidden absolute left-0 w-full bg-white shadow-md mt-1 rounded-md z-10">
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">GALLERY</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">KONTAK KAMI</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- section -->
+    <div class="container w-auto px-6 sm:px-8 md:px-12 my-8 sm:my-12">
+        <div
+            class="relative w-full max-w-6xl h-[200px] sm:h-[200px] md:h-[250px] mx-auto overflow-hidden rounded-lg shadow-lg">
+            <!-- Gambar Carousel -->
+            <div id="carousel" class="flex max-w-96 transition-transform duration-700 h-72">
+                <img src="../Asset/cihuy.jpg" class="relative w-full h-full object-cover flex-shrink-0" alt="Image 1">
+                <img src="../Asset/coffe.png" class="relative w-full h-full object-cover flex-shrink-0" alt="Image 2">
+                <img src="../Asset/sekolah.jpg" class="relative w-full h-full object-cover flex-shrink-0" alt="Image 3">
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <button id="prev"
+                class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white shadow-md p-1.5 rounded-full hover:bg-blue-700 transition-colors mx-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 hover:text-white" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="next"
+                class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white shadow-md p-1.5 rounded-full hover:bg-blue-700 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 hover:text-white" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+            <!-- <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <button class="w-2 h-2 rounded-full bg-white/60 transition-all duration-300 hover:bg-white"></button>
+                <button class="w-2 h-2 rounded-full bg-white/60 transition-all duration-300 hover:bg-white"></button>
+                <button class="w-2 h-2 rounded-full bg-white/60 transition-all duration-300 hover:bg-white"></button>
+            </div> -->
+        </div>
+    </div>
+
+
+    <!-- menu -->
+    <div class="bg-white p-8">
+        <div id="product-slider" class="relative max-w-3xl mx-auto">
+            <!-- Category Title -->
+            <div class="w-48 mr-8">
+                <h2 class="text-4xl font-bold text-gray-800 w-56 h-20">Buku Tulis</h2>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="absolute inset-y-0 flex items-center w-full z-10">
+                <button id="prev-btn" class="bg-white/50 rounded-full p-2 -ml-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="next-btn" class="bg-white/50 rounded-full p-2 -mr-6 ml-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Product Cards Container -->
+            <div id="slider-container" class="flex overflow-hidden rounded">
+                <div id="slider-wrapper" class="flex transition-transform duration-500 ease-in-out">
+                    <div class="grid grid-cols-4 gap-4 flex-shrink-0" style="width: 100%">
+                        <!-- First Page of Products -->
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="../Asset/cihuy.jpg" alt="Classic Sneakers" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Classic Sneakers</h2>
+                                <p class="text-gray-600 text-sm mt-1">Comfortable everyday sneakers with modern design.Comfortable everyday sneakers with modern design.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$99.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x301" alt="Running Shoes" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Running Shoes</h2>
+                                <p class="text-gray-600 text-sm mt-1">High-performance athletic footwear.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$129.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x302" alt="Casual Loafers" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Casual Loafers</h2>
+                                <p class="text-gray-600 text-sm mt-1">Elegant and comfortable casual shoes.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$79.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x303" alt="Hiking Boots" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Hiking Boots</h2>
+                                <p class="text-gray-600 text-sm mt-1">Rugged outdoor footwear for adventurers.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$149.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 flex-shrink-0" style="width: 100%">
+                        <!-- Second Page of Products -->
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
+                                <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$139.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
+                                <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$139.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
+                                <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$139.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
+                                <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$139.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Add remaining cards for the second page -->
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 flex-shrink-0" style="width: 100%">
+                        <!-- Second Page of Products -->
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
+                                <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$139.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
+                                <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$139.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
+                                <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$139.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
+                                <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-xl font-bold text-gray-900">$139.99</span>
+                                    <button class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Add remaining cards for the second page -->
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Dots Indicator -->
+            <div id="dots-container" class="flex justify-center mt-4 space-x-2">
+                <span class="h-2 w-2 rounded-full bg-blue-500"></span>
+                <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+                <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Tentang Kami</h4>
+                    <p class="text-gray-300">
+                        Koperasi SMKN 1 Banyuwangi berkomitmen untuk melayani kebutuhan warga sekolah
+                        dengan produk berkualitas dan harga terjangkau.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Kontak</h4>
+                    <div class="space-y-2">
+                        <p class="flex items-center text-gray-300">
+                            <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
+                            Jl. Wijaya Kusuma No. 46, Giri, Banyuwangi
+                        </p>
+                        <p class="flex items-center text-gray-300">
+                            <i data-feather="phone" class="w-5 h-5 mr-2"></i>
+                            (0333)-424541
+                        </p>
+                        <p class="flex items-center text-gray-300">
+                            <i data-feather="mail" class="w-5 h-5 mr-2"></i>
+                            smkn1bwi_wk46@yahoo.co.id
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <h4 class="text-xl font-bold mb-4">Jam Operasional</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="clock" class="w-5 h-5 mr-2"></i>
+                            <span>Senin - Kamis: 07:00 - 15:00</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i data-feather="clock" class="w-5 h-5 mr-2"></i>
+                            <span>Jumat: 07:00 - 11:30</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="clock" class="w-5 h-5 mr-2"></i>
+                            <span>Sabtu - Minggu: Tutup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white w-1/4 mx-auto mt-4 border-blue-800 mt-8 pt-8 text-center text-gray-300">
+                <p>© 2024 Koperasi SMKN 1 Banyuwangi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/gambar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
 </body>
+
 </html>

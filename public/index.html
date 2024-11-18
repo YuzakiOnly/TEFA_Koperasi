@@ -16,7 +16,6 @@
         font-family: 'Inter', sans-serif;
     }
 
-    .image {}
 </style>
 
 <body>
@@ -64,7 +63,7 @@
                             <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
                         </button>
                         <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg py-2 mt-2">
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">BUKU PELAJARAN</a>
+                            <a href="product.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">BUKU PELAJARAN</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">ALAT TULIS</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">SERAGAM SEKOLAH</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">ATRIBUT SEKOLAH</a>
@@ -72,15 +71,7 @@
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">MERCHANDISE</a>
                         </div>
                     </div>
-                    <div class="relative group">
-                        <button class="flex items-center text-gray-700 hover:text-blue-900">
-                            PROFIL
-                            <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
-                        </button>
-                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg py-2 mt-2">
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">PROFIL & TENTANG KAMI</a>
-                        </div>
-                    </div>
+                    <a href="#" class="text-gray-700 hover:text-blue-900">PROFIL</a>
                     <div class="relative group">
                         <button class="flex items-center text-gray-700 hover:text-blue-900">
                             LAINNYA
@@ -88,6 +79,7 @@
                         </button>
                         <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg py-2 mt-2">
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">GALLERY</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">KONTAK KAMI</a>
                         </div>
                     </div>
                 </div>
@@ -119,16 +111,7 @@
                         </div>
                     </div>
 
-                    <div class="relative">
-                        <button id="profil-button"
-                            class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50">
-                            PROFIL
-                        </button>
-                        <div id="profil-dropdown"
-                            class="hidden absolute left-0 w-full bg-white shadow-md mt-1 rounded-md z-10">
-                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Buku Pelajaran</a>
-                        </div>
-                    </div>
+                    <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">PROFIL</a>
 
                     <div class="relative">
                         <button id="lainnya-button"
@@ -137,7 +120,8 @@
                         </button>
                         <div id="lainnya-dropdown"
                             class="hidden absolute left-0 w-full bg-white shadow-md mt-1 rounded-md z-10">
-                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Buku Pelajaran</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">GALLERY</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">KONTAK KAMI</a>
                         </div>
                     </div>
                 </div>
@@ -240,10 +224,22 @@
                 </button>
             </div>
         </div>
+
+        <!-- Google Maps Embed -->
+        <div class="mt-10">
+            <h2 class="text-center text-xl font-semibold text-gray-700 mb-4">Lokasi Kami Warung Kopi</h2>
+            <div class="relative w-full h-80">
+                <iframe class="w-full h-full rounded-lg shadow-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.80681157973476!2d114.35032234290948!3d-8.21190779004021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd14ff70f397b65%3A0xd4855a1d5d5b2480!2sSMK%20Negeri%201%20Banyuwangi!5e0!3m2!1sen!2sid!4v1731913292036!5m2!1sen!2sid"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
     </div>
 
+    
+
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white">
+    <footer class="bg-blue-800 text-white">
         <div class="max-w-7xl mx-auto px-4 py-12">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
@@ -258,7 +254,7 @@
                     <div class="space-y-2">
                         <p class="flex items-center text-gray-300">
                             <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
-                            Jl. Wijaya Kusuma No. 46, Mojopanggung, Giri, Banyuwangi
+                            Jl. Wijaya Kusuma No. 46, Giri, Banyuwangi
                         </p>
                         <p class="flex items-center text-gray-300">
                             <i data-feather="phone" class="w-5 h-5 mr-2"></i>
@@ -270,22 +266,31 @@
                         </p>
                     </div>
                 </div>
-                <div>
+                <div class="w-full">
                     <h4 class="text-xl font-bold mb-4">Jam Operasional</h4>
                     <div class="space-y-2 text-gray-300">
-                        <i data-feather="clock" class="w-4 h-4 mr-1"></i>Senin - Kamis: 07:00 - 15:00
-                        <i data-feather="clock" class="w-4 h-4 mr-1"></i>Jumat: 07:00 - 11:30
-                        <i data-feather="clock" class="w-4 h-4 mr-1"></i>Sabtu - Minggu: Tutup
+                        <div class="flex items-center mb-2">
+                            <i data-feather="clock" class="w-5 h-5 mr-2"></i>
+                            <span>Senin - Kamis: 07:00 - 15:00</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i data-feather="clock" class="w-5 h-5 mr-2"></i>
+                            <span>Jumat: 07:00 - 11:30</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="clock" class="w-5 h-5 mr-2"></i>
+                            <span>Sabtu - Minggu: Tutup</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-gray-300">
+            <div class="border-t border-white w-1/4 mx-auto mt-4 border-blue-800 mt-8 pt-8 text-center text-gray-300">
                 <p>© 2024 Koperasi SMKN 1 Banyuwangi. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html

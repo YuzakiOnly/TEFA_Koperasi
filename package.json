@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css": "npx tailwindcss -D ./public/css/final.css --minify"
+    "css": "npx tailwindcss -D ./public/css/final.css --minify",
+    "cihuy": "git merge origin/galang"
   },
   "keywords": [],
   "author": "",
