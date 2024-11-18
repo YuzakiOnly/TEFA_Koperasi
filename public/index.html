@@ -1,12 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cihuy</title>
+    <title>Koperasi SMKN 1 Banyuwangi</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .image {}
+</style>
+
 <body>
-    <h1 class="text-3xl font-bold underline">Hello World</h1>
+    <!-- Top Info Bar -->
+    <div class="bg-blue-700 text-white py-2">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center">
+                    <i data-feather="phone" class="w-4 h-4 mr-1"></i>
+                    (0333)-424541
+                </span>
+                <span class="flex items-center">
+                    <i data-feather="mail" class="w-4 h-4 mr-1"></i>
+                    smkn1bwi_wk46@yahoo.co.id
+                </span>
+            </div>
+            <div class="flex items-center">
+                <span class="flex items-center">
+                    <i data-feather="clock" class="w-4 h-4 mr-1"></i>
+                    Senin-Jumat: 07:00 - 15:00
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/id/thumb/d/d1/Smkn1bwi.jpg/800px-Smkn1bwi.jpg"
+                        alt="Logo SMKN 1 Banyuwangi" class="h-10 w-10 mr-2">
+                    <div>
+                        <h1 class="text-lg font-bold text-blue-900">Koperasi</h1>
+                        <p class="text-sm text-gray-600">SMKN 1 Banyuwangi</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-900">Beranda</a>
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-blue-900">
+                            Produk
+                            <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg py-2 mt-2">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Buku Pelajaran</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Alat Tulis</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Seragam Sekolah</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Atribut Sekolah</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-blue-900">Tentang Kami</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-900">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" id="mobile-menu-button">
+                    <i data-feather="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Beranda</a>
+                    
+                    <div class="relative">
+                        <button id="products-button" class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50">
+                            Produk
+                        </button>
+                        <div id="products-dropdown" class="hidden absolute left-0 w-full bg-white shadow-md mt-1 rounded-md z-10">
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Produk 1</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Produk 2</a>
+                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Produk 3</a>
+                        </div>
+                    </div>
+            
+                    <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Tentang Kami</a>
+                    <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+
+
+    <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+        <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Koperasi Sekolah</h1>
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Melayani Kebutuhan siswa dengan kualitas terbaik dan harga terjangkau</p>
+            <div class="border-b-2 border-white w-24 mx-auto mb-4">
+            </div>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                    Lihat Produk
+                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+                <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                    Tentang Kami
+                </a>  
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    
+        // Dropdown untuk Produk
+        const productsButton = document.getElementById('products-button');
+        const productsDropdown = document.getElementById('products-dropdown');
+    
+        productsButton.addEventListener('click', () => {
+            productsDropdown.classList.toggle('hidden');
+        });
+    
+        // Menutup dropdown jika mengklik di luar
+        window.addEventListener('click', (event) => {
+            if (!productsButton.contains(event.target) && !productsDropdown.contains(event.target)) {
+                productsDropdown.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
-</html>
+
+</html

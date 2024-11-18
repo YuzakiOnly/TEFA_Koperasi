@@ -4,14 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koperasi SMKN 1 Banyuwangi</title>
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tambahkan Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Heroicons (untuk icon) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+    @keyframes fade {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        30% { opacity: 1; }
+        40% { opacity: 0; }
+        100% { opacity: 0; }
+    }
+
+    .animate-fade {
+        animation: fade 12s infinite;
+    }
+
+    .bg-image1 {
+        background-image: url('sekolah.jpg');
+        animation-delay: 0s;
+    }
+
+    .bg-image2 {
+        background-image: url('cihuy.jpg');
+        animation-delay: 4s;
+    }
+
+    .bg-image3 {
+        background-image: url('coffe.png');
+        animation-delay: 8s; 
+    }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Top Info Bar -->
