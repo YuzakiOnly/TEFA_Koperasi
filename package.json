@@ -6,7 +6,8 @@
     "dev": "npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "npx tailwindcss -D ./public/css/final.css --minify",
-    "cihuy": "git merge origin/galang"
+    "cihuy": "git merge origin/galang",
+    "link Excel": "https://docs.google.com/spreadsheets/d/1wLZDf8uptuirlV7v7vJkolLLBhRs8DIVnj_eDTogZug/edit?gid=0#gid=0"
   },
   "keywords": [],
   "author": "",
