@@ -1,80 +1,89 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const sliderWrapper = document.getElementById('slider-wrapper');
-//     const prevBtn = document.getElementById('prev-btn');
-//     const nextBtn = document.getElementById('next-btn');
-//     const dotsContainer = document.getElementById('dots-container');
-//     let currentIndex = 0;
-
-//     // Get the number of slides (pages)
-//     const slides = sliderWrapper.querySelectorAll('.grid');
-//     const totalSlides = slides.length;
-
-//     // Next button functionality
-//     nextBtn.addEventListener('click', () => {
-//         currentIndex = (currentIndex + 1) % totalSlides;
-//         updateSlider();
-//     });
-
-//     // Previous button functionality
-//     prevBtn.addEventListener('click', () => {
-//         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-//         updateSlider();
-//     });
-
-//     // Update slider position and dots
-//     function updateSlider() {
-//         sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-        
-//         // Update dots
-//         const dots = dotsContainer.querySelectorAll('span');
-//         dots.forEach((dot, index) => {
-//             dot.classList.toggle('bg-blue-500', index === currentIndex);
-//             dot.classList.toggle('bg-gray-300', index !== currentIndex);
-//         });
-//     }
-// });
-
+//produk 1
 document.addEventListener('DOMContentLoaded', function() {
-    const sliderWrapper = document.getElementById('slider-wrapper');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    let currentPage = 0;
-    const totalPages = 2; // Update this based on your total number of pages
+    const slider = document.getElementById('productSlider');
+    const scrollLeftBtn = document.getElementById('scrollLeft');
+    const scrollRightBtn = document.getElementById('scrollRight');
 
-    function updateSlider() {
-        const offset = -currentPage * 100;
-        sliderWrapper.style.transform = `translateX(${offset}%)`;
-    }
-
-    prevBtn.addEventListener('click', () => {
-        if (currentPage > 0) {
-            currentPage--;
-            updateSlider();
-        }
+    scrollLeftBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
     });
 
-    nextBtn.addEventListener('click', () => {
-        if (currentPage < totalPages - 1) {
-            currentPage++;
-            updateSlider();
-        }
+    scrollRightBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
     });
 });
 
+//produk 2
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('productSliders');
+    const scrollLeftBtn = document.getElementById('scrollLefts');
+    const scrollRightBtn = document.getElementById('scrollRights');
 
+    scrollLeftBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
 
+    scrollRightBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+});
 
+//produk 3
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('productSliderss');
+    const scrollLeftBtn = document.getElementById('scrollLeftss');
+    const scrollRightBtn = document.getElementById('scrollRightss');
 
+    scrollLeftBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
 
-    const overlay = document.getElementById('transition-overlay');
+    scrollRightBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+});
 
-    function startPageTransition(event, href) {
-        event.preventDefault(); // Mencegah navigasi langsung
-        overlay.classList.remove('opacity-0', 'pointer-events-none'); // Menampilkan overlay
-        overlay.classList.add('opacity-100'); // Transisi ke opacity 100
+//produk 4
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('productSlidersss');
+    const scrollLeftBtn = document.getElementById('scrollLeftsss');
+    const scrollRightBtn = document.getElementById('scrollRightsss');
 
-        setTimeout(() => {
-            window.location.href = href; // Navigasi ke halaman berikutnya
-        }, 500); // Durasi sesuai `duration-500` (500ms)
-    }
+    scrollLeftBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
 
+    scrollRightBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+});
+
+//produk 5
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('productSliderssss');
+    const scrollLeftBtn = document.getElementById('scrollLeftssss');
+    const scrollRightBtn = document.getElementById('scrollRightssss');
+
+    scrollLeftBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    scrollRightBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+});
+
+//produk 6
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('productSlidersssss');
+    const scrollLeftBtn = document.getElementById('scrollLeftsssss');
+    const scrollRightBtn = document.getElementById('scrollRightsssss');
+
+    scrollLeftBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    scrollRightBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+});z

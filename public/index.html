@@ -6,170 +6,256 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koperasi SMKN 1 Banyuwangi</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 <style>
     body {
         font-family: 'Outfit', sans-serif;
     }
+
+    #mobile-sidebar ul {
+        transition: all 0.3s ease-in-out;
+    }
 </style>
 
 <body>
     <!-- Top Info Bar -->
-    <div class="bg-blue-700 text-white py-2">
-        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
-            <div class="flex items-center space-x-4">
-                <span class="flex items-center">
-                    <i data-feather="phone" class="w-4 h-4 mr-1"></i>
-                    (0333)-424541
-                </span>
-                <span class="flex items-center">
-                    <i data-feather="mail" class="w-4 h-4 mr-1"></i>
-                    smkn1bwi_wk46@yahoo.co.id
-                </span>
+    <div class="w-full hidden md:flex bg-gray-100 py-2 px-4">
+        <div class="container max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center text-gray-600 text-sm">
+                <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                <span>Jl. Wijaya Kusuma No.46, Mojopanggung, Giri</span>
             </div>
-            <div class="flex items-center">
-                <span class="flex items-center">
-                    <i data-feather="clock" class="w-4 h-4 mr-1"></i>
-                    Senin-Jumat: 07:00 - 15:00
-                </span>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">
+                    <i data-feather="facebook" class="w-4 h-4"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">
+                    <i data-feather="instagram" class="w-4 h-4"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">
+                    <i data-feather="youtube" class="w-4 h-4"></i>
+                </a>
             </div>
         </div>
     </div>
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/id/thumb/d/d1/Smkn1bwi.jpg/800px-Smkn1bwi.jpg"
-                        alt="Logo SMKN 1 Banyuwangi" class="h-10 w-10 mr-2">
-                    <div>
-                        <h1 class="text-lg font-bold text-blue-900">Koperasi</h1>
-                        <p class="text-sm text-gray-600">SMKN 1 Banyuwangi</p>
-                    </div>
-                </div>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-900">BERANDA</a>
+    <!-- Header with Logo -->
+    <div class="bg-white text-gray-800 py-4 px-4">
+        <div class="container max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://upload.wikimedia.org/wikipedia/id/thumb/d/d1/Smkn1bwi.jpg/800px-Smkn1bwi.jpg"
+                    alt="Logo" class="h-16">
+                <div>
+                    <h1 class="text-xl font-bold text-blue-900">KOPERASI WIJAYA KUSUMA</h1>
+                    <p class="text-sm text-gray-600">SMKN 1 BANYUWANGI</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <div>
+                    <span class="font-semibold text-gray-600">Telepon:</span> (0333) - 424541
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-600">Email:</span> smkn1bwi_wk46@yahoo.co.id
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-600">NPSN:</span> 20525590
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-700 text-white sticky top-0 z-50">
+        <div class="container max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-4" id="desktop-menu">
+                    <!-- Beranda -->
+                    <a href="" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                        BERANDA
+                    </a>
+
+                    <!-- Produk Dropdown -->
                     <div class="relative group">
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                            class="flex items-center justify-between w-full py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-900 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">PRODUK
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                        <button class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                            <a href="product.html">PRODUK</a>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownNavbar"
-                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                        <div
+                            class=" absolute left-0 hidden group-hover:block mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <ul class="py-2 text-sm font-normal text-gray-600 dark:text-black"
                                 aria-labelledby="dropdownLargeButton">
                                 <li>
-                                    <a href="product.html#buku"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">BUKU TULIS</a>
+                                    <a href="product.html#buku" id="nextBuku"
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">BUKU
+                                        TULIS</a>
                                 </li>
                                 <li>
                                     <a href="product.html#tulis"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ALAT TULIS</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ALAT
+                                        TULIS</a>
                                 </li>
                                 <li>
                                     <a href="product.html#seragam"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SERAGAM SEKOLAH</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">SERAGAM
+                                        SEKOLAH</a>
                                 </li>
                                 <li>
                                     <a href="product.html#atribut"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ATRIBUT SEKOLAH</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ATRIBUT
+                                        SEKOLAH</a>
                                 </li>
                                 <li>
                                     <a href="product.html#konsumsi"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">KONSUMSI</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">KONSUMSI</a>
                                 </li>
                                 <li>
                                     <a href="product.html#merchandise"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">MERCHANDISE</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">MERCHANDISE</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <a href="#" class="text-gray-700 hover:text-blue-900">PROFIL</a>
+
+                    <!-- Profil -->
+                    <a href="#" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                        PROFIL
+                    </a>
+
+                    <!-- Lainnya Kotak Kami Dan Gallery -->
                     <div class="relative group">
-                        <button id="lainnyaNavbarLink" data-dropdown-toggle="lainnyaNavbar"
-                            class="flex items-center justify-between w-full py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-900 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">LAINNYA
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                        <button class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                            LAINNYA
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <!-- Dropdown menu -->
-                        <div id="lainnyaNavbar"
-                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                        <div
+                            class="absolute left-0 hidden group-hover:block mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <ul class="py-2 text-sm text-sm font-normal text-gray-600 dark:text-black"
                                 aria-labelledby="dropdownLargeButton">
                                 <li>
                                     <a href="kontak.html"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">KONTAK KAMI</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">KONTAK
+                                        KAMI</a>
                                 </li>
                                 <li>
                                     <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">GALLERY</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">GALLERY</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden" id="mobile-menu-button">
-                    <i data-feather="menu" class="h-6 w-6"></i>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div class="hidden md:hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">BERANDA</a>
-
+                <!-- Search Bar -->
+                <div class="items-center space-x-4 flex ml-auto">
+                    <!-- Search Icon -->
                     <div class="relative">
-                        <button id="products-button"
-                            class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50">
-                            PRODUK
+                        <button id="search-toggle" class="text-white hover:text-blue-200 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
                         </button>
-                        <div id="products-dropdown"
-                            class="hidden absolute left-0 w-full bg-white shadow-md mt-1 rounded-md z-10">
-                            <a href="product.html#buku" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">BUKU PELAJARAN</a>
-                            <a href="product.html#tulis" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">ALAT TULIS</a>
-                            <a href="product.html#seragam" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">SERAGAM SEKOLAH</a>
-                            <a href="product.html#atribut" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">ATRIBUT SEKOLAH</a>
-                            <a href="product.html#konsumsi" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">KONSUMSI</a>
-                            <a href="product.html#merchandise" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">MERCHANDISE</a>
+
+                        <!-- Search Popup -->
+                        <div id="search-popup"
+                            class="hidden absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg z-50 p-4">
+                            <div class="relative">
+                                <input type="text" id="search-input" placeholder="Cari sesuatu..."
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <button id="search-submit"
+                                    class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-600 hover:text-blue-600">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
+                    <!-- Hamburger Button -->
+                    <button id="hamburger-menu" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
 
-                    <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">PROFIL</a>
-
-                    <div class="relative">
-                        <button id="lainnya-button"
-                            class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50">
-                            LAINNYA
+                <!-- Sidebar -->
+                <div id="mobile-sidebar" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
+                    <div class="bg-white w-64 h-full shadow-md">
+                        <button id="close-sidebar" class="p-4 text-gray-700 hover:text-gray-900 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12">
+                                </path>
+                            </svg>
                         </button>
-                        <div id="lainnya-dropdown"
-                            class="hidden absolute left-0 w-full bg-white shadow-md mt-1 rounded-md z-10">
-                            <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">GALLERY</a>
-                            <a href="kontak.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50">KONTAK KAMI</a>
-                        </div>
+                        <ul class="mt-4 space-y-4 px-4 text-gray-800">
+                            <li><a href="" class="block py-2 hover:bg-gray-100">BERANDA</a></li>
+                            <li>
+                                <button class="flex items-center w-full py-2 text-left hover:bg-gray-100"
+                                    onclick="toggleDropdown('profil-dropdown')">
+                                    PRODUK
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <ul id="profil-dropdown" class="hidden pl-4 space-6">
+                                    <li><a href="product.html#buku" class="block py-2 hover:bg-gray-100">BUKU
+                                            PEMBELAJARAN</a></li>
+                                    <li><a href="product.html#tulis" class="block py-2 hover:bg-gray-100">ALAT TULIS</a></li>
+                                    <li><a href="product.html#seragam" class="block py-2 hover:bg-gray-100">SERAGAM
+                                            SEKOLAH</a></li>
+                                    <li><a href="product.html#atribut" class="block py-2 hover:bg-gray-100">ATRIBUT
+                                            SEKOLAH</a></li>
+                                    <li><a href="product.html#konsumsi" class="block py-2 hover:bg-gray-100">KONSUMSI</a>
+                                    </li>
+                                    <li><a href="product.html#merchandise"
+                                            class="block py-2 hover:bg-gray-100">MERCHANDISE</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="index.html" class="block py-2 hover:bg-gray-100">PROFIL</a></li>
+
+                            <li>
+                                <button class="flex items-center w-full py-2 text-left hover:bg-gray-100"
+                                    onclick="toggleDropdown('produk-dropdown')">
+                                    LAINNYA
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <ul id="produk-dropdown" class="hidden pl-4 space-y-2">
+                                    <li><a href="kontak.html" class="block py-2 hover:bg-gray-100">KONTAK KAMI</a>
+                                    </li>
+                                    <li><a href="" class="block py-2 hover:bg-gray-100">GALLERY</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-
+    <!-- side bar end -->
 
     <!-- Hero Section -->
 
@@ -181,10 +267,10 @@
                 Koperasi Sekolah</h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Melayani Kebutuhan siswa
                 dengan kualitas terbaik dan harga terjangkau</p>
-            <div class="border-b-2 border-white w-1/4 mx-auto mb-4">
+            <div class="border-b-2 border-white w-1/2 mx-auto mb-4">
             </div>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-                <a href="#"
+                <a href="product.html"
                     class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                     Lihat Produk
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +279,7 @@
                             d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
                 </a>
-                <a href="#"
+                <a href=""
                     class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                     Tentang Kami
                 </a>
@@ -208,10 +294,10 @@
             <!-- Kategori 1 -->
             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <i data-feather="book" class="w-12 h-12 text-blue-900 mb-4"></i>
-                <h4 class="text-xl font-semibold mb-2">Buku Pelajaran</h4>
+                <h4 class="text-xl font-semibold mb-2">Buku Tulis</h4>
                 <p class="text-gray-600">Buku mata pelajaran, LKS, modul pembelajaran</p>
                 <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    Lihat Produk →
+                    <a href="product.html#buku">Lihat Produk →</a> 
                 </button>
             </div>
 
@@ -221,7 +307,7 @@
                 <h4 class="text-xl font-semibold mb-2">Alat Tulis</h4>
                 <p class="text-gray-600">Pulpen, pensil, penghapus, penggaris</p>
                 <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    Lihat Produk →
+                    <a href="product.html#tulis">Lihat Produk →</a> 
                 </button>
             </div>
 
@@ -231,7 +317,7 @@
                 <h4 class="text-xl font-semibold mb-2">Seragam Sekolah</h4>
                 <p class="text-gray-600">Seragam OSIS, Pramuka, praktik, olahraga</p>
                 <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    Lihat Produk →
+                    <a href="product.html#seragam">Lihat Produk →</a> 
                 </button>
             </div>
 
@@ -241,7 +327,7 @@
                 <h4 class="text-xl font-semibold mb-2">Atribut Sekolah</h4>
                 <p class="text-gray-600">Badge, dasi, topi, kaos kaki</p>
                 <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    Lihat Produk →
+                    <a href="product.html#atribut">Lihat Produk →</a> 
                 </button>
             </div>
 
@@ -251,7 +337,7 @@
                 <h4 class="text-xl font-semibold mb-2">Konsumsi</h4>
                 <p class="text-gray-600">Makanan ringan, minuman, snack</p>
                 <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    Lihat Produk →
+                    <a href="product.html#konsumsi">Lihat Produk →</a> 
                 </button>
             </div>
 
@@ -261,7 +347,7 @@
                 <h4 class="text-xl font-semibold mb-2">Merchandise</h4>
                 <p class="text-gray-600">Tas sekolah, tumbler, merchandise SMKN 1</p>
                 <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    Lihat Produk →
+                    <a href="product.html#merchandise">Lihat Produk →</a> 
                 </button>
             </div>
         </div>
@@ -283,8 +369,8 @@
                     </p>
 
                     <div class="bg-blue-600 mt-8 md:mt-8">
-                        <a href="#"
-                            class="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400">
+                        <a href=""
+                            class="inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400">
                             Get Tentang Kami
                         </a>
                     </div>
@@ -299,7 +385,7 @@
     <div class="max-w-7xl mx-auto my-12">
         <h2 class="text-center text-2xl font-semibold text-gray-700 mb-4">LOKASI SMKN 1 BANYUWANGI</h2>
         <div class="relative w-full h-80">
-            <iframe class="w-full h-full rounded-lg shadow-lg"
+            <iframe class="w-full mx-auto h-full rounded-lg shadow-lg"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.80681157973476!2d114.35032234290948!3d-8.21190779004021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd14ff70f397b65%3A0xd4855a1d5d5b2480!2sSMK%20Negeri%201%20Banyuwangi!5e0!3m2!1sen!2sid!4v1731913292036!5m2!1sen!2sid"
                 allowfullscreen="" loading="lazy">
             </iframe>
@@ -309,53 +395,76 @@
 
 
     <!-- Footer -->
-    <footer class="bg-blue-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h1 class="text-xl font-bold mb-4">Tentang Kami</h1>
-                    <p class="text-gray-300">
+    <footer class="bg-[#152A38] text-white ">
+        <div class="container mx-auto px-4 py-8 md:py-12 flex justify-center">
+            <!-- Grid Container -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 ">
+                <!-- Tentang Kami -->
+                <div class="mb-8 md:mb-0 max-w-sm ">
+                    <h2 class="text-lg font-bold text-blue-500 border-l-4 border-blue-500 pl-2 mb-4">
+                        TENTANG KAMI
+                    </h2>
+                    <div class="flex items-start">
+                        <div>
+                            <h3 class="text-lg md:text-xl font-bold">
+                                KOPERASI WIJAYA KUSUMA
+                            </h3>
+                            <p class="text-sm italic mb-4">
+                                SMKN 1 BANYUWANGI
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm md:text-base">
                         Koperasi SMKN 1 Banyuwangi berkomitmen untuk melayani kebutuhan warga sekolah
                         dengan produk berkualitas dan harga terjangkau.
                     </p>
                 </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Kontak</h4>
-                    <div class="space-y-2">
-                        <p class="flex items-center text-gray-300">
-                            <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
-                            Jl. Wijaya Kusuma No. 46, Giri, Banyuwangi
-                        </p>
-                        <p class="flex items-center text-gray-300">
-                            <i data-feather="phone" class="w-5 h-5 mr-2"></i>
-                            (0333)-424541
-                        </p>
-                        <p class="flex items-center text-gray-300">
-                            <i data-feather="mail" class="w-5 h-5 mr-2"></i>
-                            smkn1bwi_wk46@yahoo.co.id
-                        </p>
-                    </div>
+
+                <!-- Jam Kerja -->
+                <div class="mb-8 md:mb-0 max-w-sm">
+                    <h2 class="text-lg font-bold text-blue-500 border-l-4 border-blue-500 pl-2 mb-4">
+                        JAM KERJA
+                    </h2>
+                    <p class="text-sm md:text-base mb-4">
+                        Kami bekerja 5 hari dalam seminggu. Hubungi kami jika anda memerlukan bantuan dengan menghubungi
+                        kontak di bawah ini.
+                    </p>
+                    <ul class="space-y-3 text-sm md:text-base">
+                        <li class="flex justify-between items-center">
+                            <span>Senin - Jumat:</span>
+                            <span>06:30 - 16:00</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Sabtu:</span>
+                            <span>08:00 - 12:00</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Minggu dan hari libur lainnya:</span>
+                            <span>Tutup</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="w-full">
-                    <h4 class="text-xl font-bold mb-4">Jam Operasional</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <div class="flex items-center mb-2">
-                            <i data-feather="clock" class="w-5 h-5 mr-2"></i>
-                            <span>Senin - Kamis: 07:00 - 15:00</span>
-                        </div>
-                        <div class="flex items-center mb-2">
-                            <i data-feather="clock" class="w-5 h-5 mr-2"></i>
-                            <span>Jumat: 07:00 - 11:30</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i data-feather="clock" class="w-5 h-5 mr-2"></i>
-                            <span>Sabtu - Minggu: Tutup</span>
-                        </div>
-                    </div>
+
+                <!-- Layanan -->
+                <div class="max-w-sm">
+                    <h2 class="text-lg font-bold text-blue-500 border-l-4 border-blue-500 pl-2 mb-4">
+                        LAYANAN
+                    </h2>
+                    <ul class="space-y-3 text-sm md:text-base">
+                        <li>Layanan Konsumsi</li>
+                        <li>Layanan Produksi</li>
+                        <li>Layanan Pemasaran</li>
+                    </ul>
                 </div>
             </div>
-            <div class="border-t border-white w-1/4 mx-auto mt-4 border-blue-800 mt-8 pt-8 text-center text-gray-300">
-                <p>© 2024 Koperasi SMKN 1 Banyuwangi. All rights reserved.</p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="bg-blue-600 py-4">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-sm">
+                    Copyright © 2024 , Developed by Masben
+                </p>
             </div>
         </div>
     </footer>
@@ -364,6 +473,7 @@
     <script src="js/main.js"></script>
     <script src="js/kontak.js"></script>
     <script src="js/menu.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>
 
 </html

@@ -1,275 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Card Slider</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .notification-enter {
+            animation: slideInDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-120%);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .notification-container {
+            max-width: 100%;
+            width: 450px;
+            pointer-events: none;
+        }
+
+        .notification {
+            pointer-events: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .buy-button {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .buy-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .buy-button:active {
+            transform: translateY(1px);
+        }
+
+        @media (max-width: 640px) {
+            .notification-container {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 p-8">
-    <div id="product-slider" class="relative max-w-6xl mx-auto">
-        <!-- Category Title -->
-        <div class="w-48 mr-8">
-            <h2 class="text-4xl font-bold text-gray-800 w-56 h-20">Buku Tulis</h2>
-        </div>
-        <!-- Navigation Buttons -->
-        <div class="absolute inset-y-0 flex items-center w-full z-10">
-            <button id="prev-btn" class="bg-white/50 rounded-full p-2 -ml-6">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-            <button id="next-btn" class="bg-white/50 rounded-full p-2 -mr-6 ml-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Product Cards Container -->
-        <div id="slider-container" class="flex overflow-hidden rounded">
-            <div id="slider-wrapper" class="flex transition-transform duration-500 ease-in-out">
-                <div class="grid grid-cols-4 gap-4 flex-shrink-0" style="width: 100%">
-                    <!-- First Page of Products -->
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="../Asset/cihuy.jpg" alt="Classic Sneakers" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Classic Sneakers</h2>
-                            <p class="text-gray-600 text-sm mt-1">Comfortable everyday sneakers with modern design.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$99.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x301" alt="Running Shoes"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Running Shoes</h2>
-                            <p class="text-gray-600 text-sm mt-1">High-performance athletic footwear.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$129.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x302" alt="Casual Loafers"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Casual Loafers</h2>
-                            <p class="text-gray-600 text-sm mt-1">Elegant and comfortable casual shoes.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$79.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x303" alt="Hiking Boots"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Hiking Boots</h2>
-                            <p class="text-gray-600 text-sm mt-1">Rugged outdoor footwear for adventurers.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$149.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid grid-cols-4 gap-4 flex-shrink-0" style="width: 100%">
-                    <!-- Second Page of Products -->
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
-                            <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$139.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
-                            <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$139.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
-                            <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$139.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
-                            <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$139.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Add remaining cards for the second page -->
-                </div>
-                <div class="grid grid-cols-4 gap-4 flex-shrink-0" style="width: 100%">
-                    <!-- Second Page of Products -->
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
-                            <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$139.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
-                            <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$139.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
-                            <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$139.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/400x304" alt="Basketball Shoes"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h2 class="text-lg font-bold text-gray-800">Basketball Shoes</h2>
-                            <p class="text-gray-600 text-sm mt-1">High-top performance basketball sneakers.</p>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xl font-bold text-gray-900">$139.99</span>
-                                <button
-                                    class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition duration-300">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Add remaining cards for the second page -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Dots Indicator -->
-        <div id="dots-container" class="flex justify-center mt-4 space-x-2">
-            <span class="h-2 w-2 rounded-full bg-blue-500"></span>
-            <span class="h-2 w-2 rounded-full bg-gray-300"></span>
-            <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+<body class="p-4 bg-gray-50">
+    <!-- Notifications Container -->
+    <div id="notification-container" class="fixed top-0 left-0 right-0 flex justify-center z-50 mt-4 px-4">
+        <div class="notification-container">
+            <!-- Notifications will be dynamically added here -->
         </div>
     </div>
 
-    <!--
-  Heads up! 👋
+    <!-- Button Container -->
+    <div class="max-w-md mx-auto space-y-4">
+        <button onclick="createNotification('info')"
+            class="buy-button w-full bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 active:bg-blue-700 transition-colors cursor-pointer text-lg font-medium">
+            Show Info Alert
+        </button>
 
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
--->
+        <button onclick="createNotification('success')"
+            class="buy-button w-full bg-green-500 text-white py-3 px-4 rounded-lg hover:bg-green-600 active:bg-green-700 transition-colors cursor-pointer text-lg font-medium">
+            Show Success Alert
+        </button>
 
-    <section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2">
-        <div class="p-8 md:p-12 lg:px-16 lg:py-24">
-            <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                </h2>
+        <button onclick="createNotification('warning')"
+            class="buy-button w-full bg-yellow-500 text-white py-3 px-4 rounded-lg hover:bg-yellow-600 active:bg-yellow-700 transition-colors cursor-pointer text-lg font-medium">
+            Show Warning Alert
+        </button>
+    </div>
 
-                <p class="hidden text-gray-500 md:mt-4 md:block">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam
-                    sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-                    quisque ut interdum tincidunt duis.
-                </p>
+    <script>
+        const notificationContainer = document.querySelector('.notification-container');
+        let notificationCount = 0;
 
-                <div class="mt-4 md:mt-8">
-                    <a href="#"
-                        class="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400">
-                        Get Started Today
-                    </a>
-                </div>
-            </div>
+        const NOTIFICATION_TYPES = {
+            info: {
+                icon: 'info-circle',
+                title: 'Produk Sudah Disimpan',
+                colors: {
+                    bg: 'bg-blue-50',
+                    border: 'border-blue-300',
+                    text: 'text-blue-800',
+                    iconBg: 'bg-blue-100',
+                    iconText: 'text-blue-500',
+                    closeHover: 'hover:bg-blue-200'
+                }
+            },
+            success: {
+                icon: 'check-circle',
+                title: 'Produk Berhasil Disimpan',
+                colors: {
+                    bg: 'bg-green-50',
+                    border: 'border-green-300',
+                    text: 'text-green-800',
+                    iconBg: 'bg-green-100',
+                    iconText: 'text-green-500',
+                    closeHover: 'hover:bg-green-200'
+                }
+            },
+            warning: {
+                icon: 'exclamation-triangle',
+                title: 'Periksa Kembali Produk Anda',
+                colors: {
+                    bg: 'bg-yellow-50',
+                    border: 'border-yellow-300',
+                    text: 'text-yellow-800',
+                    iconBg: 'bg-yellow-100',
+                    iconText: 'text-yellow-500',
+                    closeHover: 'hover:bg-yellow-200'
+                }
+            }
+        };
+
+        function createNotification(type) {
+            const id = `notification-${notificationCount++}`;
+            const notifType = NOTIFICATION_TYPES[type];
+            const colors = notifType.colors;
+
+            const notification = document.createElement('div');
+            notification.id = id;
+            notification.className = `notification notification-enter`;
+
+            notification.innerHTML = `
+        <div class="flex items-center p-4 mb-4 ${colors.text} rounded-lg ${colors.bg} border ${colors.border}" role="alert">
+          <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 ${colors.iconText} ${colors.iconBg} rounded-lg">
+            <i class="fas fa-${notifType.icon}"></i>
+          </div>
+          <div class="ms-3 text-sm font-medium">
+            ${notifType.title}
+          </div>
+          <button onclick="removeNotification('${id}')" type="button" 
+            class="ms-auto -mx-1.5 -my-1.5 ${colors.bg} ${colors.iconText} rounded-lg focus:ring-2 focus:ring-${colors.iconText} p-1.5 ${colors.closeHover} inline-flex items-center justify-center h-8 w-8">
+            <span class="sr-only">Close</span>
+            <i class="fas fa-times"></i>
+          </button>
         </div>
+      `;
 
-        <img alt=""
-            src="https://images.unsplash.com/photo-1464582883107-8adf2dca8a9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            class="h-56 w-full object-cover sm:h-full" />
-    </section>
+            notificationContainer.appendChild(notification);
 
-    <script src="./js/menu.js"></script>
+            // Auto remove after 4 seconds
+            setTimeout(() => {
+                if (document.getElementById(id)) {
+                    removeNotification(id);
+                }
+            }, 4000);
+        }
+
+        function removeNotification(id) {
+            const notification = document.getElementById(id);
+            if (notification) {
+                notification.classList.add('hidden');
+                setTimeout(() => {
+                    notification.remove();
+                }, 100);
+            }
+        }
+    </script>
 </body>
 
 </html>
