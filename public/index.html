@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koperasi SMKN 1 Banyuwangi</title>
+    <title>Toko Darma Wiyata</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com">
     </script>
@@ -24,9 +24,9 @@
     }
 </style>
 
-<body>
+<body class="bg-gray-50">
     <!-- Top Info Bar -->
-    <div class="w-full hidden md:flex bg-gray-100 py-2 px-4">
+    <div class="w-full hidden md:flex bg-gray-200 py-2 px-4">
         <div class="container max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center text-gray-600 text-sm">
                 <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
@@ -53,7 +53,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/id/thumb/d/d1/Smkn1bwi.jpg/800px-Smkn1bwi.jpg"
                     alt="Logo" class="h-16">
                 <div>
-                    <h1 class="text-xl font-bold text-blue-900">KOPERASI WIJAYA KUSUMA</h1>
+                    <h1 class="text-xl font-bold text-blue-900">TOKO DARMA WIYATA</h1>
                     <p class="text-sm text-gray-600">SMKN 1 BANYUWANGI</p>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-4" id="desktop-menu">
                     <!-- Beranda -->
-                    <a href="" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                    <a href="./index.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                         BERANDA
                     </a>
 
@@ -96,32 +96,23 @@
                             <ul class="py-2 text-sm font-normal text-gray-600 dark:text-black"
                                 aria-labelledby="dropdownLargeButton">
                                 <li>
-                                    <a href="product.html#buku" id="nextBuku"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">BUKU
-                                        TULIS</a>
-                                </li>
-                                <li>
-                                    <a href="product.html#tulis"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ALAT
-                                        TULIS</a>
-                                </li>
-                                <li>
-                                    <a href="product.html#seragam"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">SERAGAM
-                                        SEKOLAH</a>
+                                    <a href="product.html#atk" id="nextBuku"
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ALAT TULIS KANTOR</a>
                                 </li>
                                 <li>
                                     <a href="product.html#atribut"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ATRIBUT
-                                        SEKOLAH</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ALAT
+                                        ATRIBUT</a>
                                 </li>
                                 <li>
                                     <a href="product.html#konsumsi"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">KONSUMSI</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">SERAGAM
+                                        KONSUMSI</a>
                                 </li>
                                 <li>
-                                    <a href="product.html#merchandise"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">MERCHANDISE</a>
+                                    <a href="product.html#non"
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ATRIBUT
+                                        NON KONSUMSI</a>
                                 </li>
                             </ul>
                         </div>
@@ -217,17 +208,20 @@
                                     </svg>
                                 </button>
                                 <ul id="profil-dropdown" class="hidden pl-4 space-6">
-                                    <li><a href="product.html#buku" class="block py-2 hover:bg-gray-100">BUKU
-                                            PEMBELAJARAN</a></li>
-                                    <li><a href="product.html#tulis" class="block py-2 hover:bg-gray-100">ALAT TULIS</a></li>
-                                    <li><a href="product.html#seragam" class="block py-2 hover:bg-gray-100">SERAGAM
-                                            SEKOLAH</a></li>
-                                    <li><a href="product.html#atribut" class="block py-2 hover:bg-gray-100">ATRIBUT
-                                            SEKOLAH</a></li>
-                                    <li><a href="product.html#konsumsi" class="block py-2 hover:bg-gray-100">KONSUMSI</a>
+                                    <li>
+                                        <a href="product.html#atk" class="block py-2 hover:bg-gray-100">ALAT TULIS KANTOR</a>
                                     </li>
-                                    <li><a href="product.html#merchandise"
-                                            class="block py-2 hover:bg-gray-100">MERCHANDISE</a></li>
+
+                                    <li>
+                                        <a href="product.html#atribut" class="block py-2 hover:bg-gray-100">ATRIBUT</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="product.html#konsumsi" class="block py-2 hover:bg-gray-100">KONSUMSI</a>
+                                    </li>
+
+                                    <li><a href="product.html#non" class="block py-2 hover:bg-gray-100">NON KONSUMSI</a>
+                                    </li>
                                 </ul>
                             </li>
 
@@ -264,7 +258,7 @@
         style="background-image: url(../Asset/cihuy.jpg); background-size:cover ; background-blend-mode: multiply;">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-                Koperasi Sekolah</h1>
+                Darma Wiyata</h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Melayani Kebutuhan siswa
                 dengan kualitas terbaik dan harga terjangkau</p>
             <div class="border-b-2 border-white w-1/2 mx-auto mb-4">
@@ -288,74 +282,60 @@
     </section>
 
     <!-- Kategori Produk -->
-    <div class="max-w-7xl mx-auto px-4 py-16 ">
-        <h2 class="text-center text-3xl font-semibold text-gray-700 mb-4">Kategori</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Kategori 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <i data-feather="book" class="w-12 h-12 text-blue-900 mb-4"></i>
-                <h4 class="text-xl font-semibold mb-2">Buku Tulis</h4>
-                <p class="text-gray-600">Buku mata pelajaran, LKS, modul pembelajaran</p>
-                <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    <a href="product.html#buku">Lihat Produk →</a> 
-                </button>
+    <div class="max-w-7xl mx-auto px-4 py-24">
+        <h2 class="text-center text-3xl font-bold font-monospace text-gray-900 mb-8">Kategori</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Kategori 1: Buku Tulis -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <div class="flex items-center mb-4">
+                    <i data-feather="edit" class="w-12 h-12 text-blue-900 mr-4"></i>
+                    <h4 class="text-xl font-semibold">ATK (Alat Tulis Kantor)</h4>
+                </div>
+                <p class="text-gray-600 mb-4">Pulpen, Pensil, Penghapus, Penggaris, Kertas A4, dan lain-lain</p>
+                <a href="product.html#buku" class="inline-block mt-2 text-blue-900 font-semibold hover:text-blue-700 transition-colors">
+                    Lihat Produk →
+                </a>
             </div>
-
-            <!-- Kategori 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <i data-feather="edit" class="w-12 h-12 text-blue-900 mb-4"></i>
-                <h4 class="text-xl font-semibold mb-2">Alat Tulis</h4>
-                <p class="text-gray-600">Pulpen, pensil, penghapus, penggaris</p>
-                <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    <a href="product.html#tulis">Lihat Produk →</a> 
-                </button>
+            
+            <!-- Kategori 2: Alat Tulis -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <div class="flex items-center mb-4">
+                    <i data-feather="award" class="w-12 h-12 text-blue-900 mr-4"></i>
+                    <h4 class="text-xl font-semibold">Atribut</h4>
+                </div>
+                <p class="text-gray-600 mb-4">Dasi, Kaos kaki, Sabuk, Ring Pramuka, dan lain-lain</p>
+                <a href="product.html#tulis" class="inline-block mt-2 text-blue-900 font-semibold hover:text-blue-700 transition-colors">
+                    Lihat Produk →
+                </a>
             </div>
-
-            <!-- Kategori 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <i data-feather="user" class="w-12 h-12 text-blue-900 mb-4"></i>
-                <h4 class="text-xl font-semibold mb-2">Seragam Sekolah</h4>
-                <p class="text-gray-600">Seragam OSIS, Pramuka, praktik, olahraga</p>
-                <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    <a href="product.html#seragam">Lihat Produk →</a> 
-                </button>
+            <!-- Kategori 3: Buku Tulis -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <div class="flex items-center mb-4">
+                    <i data-feather="coffee" class="w-12 h-12 text-blue-900 mr-4"></i>
+                    <h4 class="text-xl font-semibold">Konsumsi</h4>
+                </div>
+                <p class="text-gray-600 mb-4">Snack, Minuman, Makanan, dan lain-lain</p>
+                <a href="product.html#buku" class="inline-block mt-2 text-blue-900 font-semibold hover:text-blue-700 transition-colors">
+                    Lihat Produk →
+                </a>
             </div>
-
-            <!-- Kategori 4 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <i data-feather="award" class="w-12 h-12 text-blue-900 mb-4"></i>
-                <h4 class="text-xl font-semibold mb-2">Atribut Sekolah</h4>
-                <p class="text-gray-600">Badge, dasi, topi, kaos kaki</p>
-                <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    <a href="product.html#atribut">Lihat Produk →</a> 
-                </button>
-            </div>
-
-            <!-- Kategori 5 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <i data-feather="coffee" class="w-12 h-12 text-blue-900 mb-4"></i>
-                <h4 class="text-xl font-semibold mb-2">Konsumsi</h4>
-                <p class="text-gray-600">Makanan ringan, minuman, snack</p>
-                <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    <a href="product.html#konsumsi">Lihat Produk →</a> 
-                </button>
-            </div>
-
-            <!-- Kategori 6 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <i data-feather="shopping-bag" class="w-12 h-12 text-blue-900 mb-4"></i>
-                <h4 class="text-xl font-semibold mb-2">Merchandise</h4>
-                <p class="text-gray-600">Tas sekolah, tumbler, merchandise SMKN 1</p>
-                <button class="mt-4 text-blue-900 font-semibold hover:text-blue-700">
-                    <a href="product.html#merchandise">Lihat Produk →</a> 
-                </button>
+            <!-- Kategori 4: Buku Tulis -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <div class="flex items-center mb-4">
+                    <i data-feather="shopping-bag" class="w-12 h-12 text-blue-900 mr-4"></i>
+                    <h4 class="text-xl font-semibold">Non Konsumsi</h4>
+                </div>
+                <p class="text-gray-600 mb-4">Sabun, Galon, Pembersih, dan lain-lain</p>
+                <a href="product.html#buku" class="inline-block mt-2 text-blue-900 font-semibold hover:text-blue-700 transition-colors">
+                    Lihat Produk →
+                </a>
             </div>
         </div>
     </div>
 
-    <div class="mt-[90px] mb-[120px] my-0">
+    <div class="mt-[20px] mb-[100px] my-0">
         <h2 class="text-center text-3xl font-semibold text-gray-700 mb-4">Tentang Kami</h2>
-        <div class="overflow-hidden max-w-7xl mx-auto my-10 bg-gray-50 sm:grid sm:grid-cols-2">
+        <div class="overflow-hidden max-w-7xl mx-auto my-10 bg-white sm:grid sm:grid-cols-2">
             <div class="p-8 md:p-12 lg:px-16 lg:py-24">
                 <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
                     <h2 class="text-left mb-10 text-2xl font-bold text-gray-900 md:text-3xl">
@@ -368,9 +348,9 @@
                         quisque ut interdum tincidunt duis.
                     </p>
 
-                    <div class="bg-blue-600 mt-8 md:mt-8">
+                    <div class="mt-8 md:mt-8">
                         <a href=""
-                            class="inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400">
+                            class="inline-block rounded w-full bg-blue-600 hover:bg-blue-800 px-12 py-3 text-sm font-medium text-white transition">
                             Get Tentang Kami
                         </a>
                     </div>

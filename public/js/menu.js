@@ -57,33 +57,3 @@ document.addEventListener('DOMContentLoaded', function() {
         slider.scrollBy({ left: 300, behavior: 'smooth' });
     });
 });
-
-//produk 5
-document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.getElementById('productSliderssss');
-    const scrollLeftBtn = document.getElementById('scrollLeftssss');
-    const scrollRightBtn = document.getElementById('scrollRightssss');
-
-    scrollLeftBtn.addEventListener('click', () => {
-        slider.scrollBy({ left: -300, behavior: 'smooth' });
-    });
-
-    scrollRightBtn.addEventListener('click', () => {
-        slider.scrollBy({ left: 300, behavior: 'smooth' });
-    });
-});
-
-//produk 6
-document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.getElementById('productSlidersssss');
-    const scrollLeftBtn = document.getElementById('scrollLeftsssss');
-    const scrollRightBtn = document.getElementById('scrollRightsssss');
-
-    scrollLeftBtn.addEventListener('click', () => {
-        slider.scrollBy({ left: -300, behavior: 'smooth' });
-    });
-
-    scrollRightBtn.addEventListener('click', () => {
-        slider.scrollBy({ left: 300, behavior: 'smooth' });
-    });
-});z
