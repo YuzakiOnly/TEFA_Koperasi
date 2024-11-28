@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Gap Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="relative flex overflow-x-hidden">
+    <div class="py-12 animate-marquee whitespace-nowrap">
+      <span class="text-4xl mx-4">Marquee Item 1</span>
+      <span class="text-4xl mx-4">Marquee Item 2</span>
+      <span class="text-4xl mx-4">Marquee Item 3</span>
+      <span class="text-4xl mx-4">Marquee Item 4</span>
+      <span class="text-4xl mx-4">Marquee Item 5</span>
+    </div>
+  
+    <div class="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
+      <span class="text-4xl mx-4">Marquee Item 1</span>
+      <span class="text-4xl mx-4">Marquee Item 2</span>
+      <span class="text-4xl mx-4">Marquee Item 3</span>
+      <span class="text-4xl mx-4">Marquee Item 4</span>
+      <span class="text-4xl mx-4">Marquee Item 5</span>
+    </div>
+  </div>
+  
+
+ 
+
+
+
+  <div class="grid grid-cols-3 grid-rows-10 gap-4 w-full h-screen mx-6 my-32">
+    <div class="rounded-xl col-span-2 row-span-1 bg-blue-500 h-full overflow-hidden flex items-center justify-center">
+      <img class="w-full h-full object-cover rounded-lg" src="../Asset/tefa 1.jpg" alt="Gambar Arabika">
+    </div>
+    <div class=" rounded-xl col-span-1 row-span-3 bg-blue-500 h-fulloverflow-hidden flex items-center justify-center">
+      <img class="w-full h-full object-cover rounded-lg" src="../Asset/tefa10.jpg" alt="Gambar Arabika"></div>
+    <div class=" rounded-xl col-span-1 row-span-2 bg-blue-500 h-full overflow-hidden flex items-center justify-center">
+      <img class="w-full h-full object-cover rounded-lg" src="../Asset/tefa11.jpg" alt="Gambar Arabika">
+    </div>
+    <div class=" rounded-xl col-span-1 row-span-1 bg-blue-500 h-full overflow-hidden flex items-center justify-center">
+      <img class="w-full h-full object-cover rounded-lg" src="../Asset/tefa14.jpg" alt="Gambar Arabika">
+    </div>
+    <div class=" rounded-xl col-span-1 row-span-1 bg-blue-500 h-full overflow-hidden flex items-center justify-center">
+      <img class="w-full h-full object-cover rounded-lg" src="../Asset/tefa16.jpg" alt="Gambar Arabika">
+    </div>
+    <div class=" rounded-xl col-span-1 row-span-2 bg-blue-500">6</div>
+    <div class=" rounded-xl col-span-3 row-span-2 bg-blue-500">7</div>
+  </div>
+</body>
+
+</html>
