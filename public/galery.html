@@ -4,30 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri</title>
+    <title>Toko Darma Wiyata</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../Asset/koperasilogo.png">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
+<style>
+    body {
+        font-family: 'Outfit', sans-serif;
+    }
+    
+    #mobile-sidebar ul {
+        transition: all 0.3s ease-in-out;
+    }
+</style>
 
 <body>
     <!-- Top Info Bar -->
-    <div class="w-full hidden md:flex bg-gray-100 py-2 px-4">
+    <div class="w-full hidden md:flex bg-gray-200 py-2 px-4">
         <div class="container max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center text-gray-600 text-sm">
                 <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
                 <span>Jl. Wijaya Kusuma No.46, Mojopanggung, Giri</span>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">
+                <a href="https://www.facebook.com/SMKN1BANYUWANGI.SCH/"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
                     <i data-feather="facebook" class="w-4 h-4"></i>
                 </a>
-                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">
+                <a href="https://www.instagram.com/smkn1banyuwangi.sch/?hl=en"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
                     <i data-feather="instagram" class="w-4 h-4"></i>
                 </a>
-                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">
+                <a href="https://www.youtube.com/@OFFICIALSMKN1BANYUWANGI"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
                     <i data-feather="youtube" class="w-4 h-4"></i>
                 </a>
             </div>
@@ -41,7 +61,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/id/thumb/d/d1/Smkn1bwi.jpg/800px-Smkn1bwi.jpg"
                     alt="Logo" class="h-16">
                 <div>
-                    <h1 class="text-xl font-bold text-blue-900">KOPERASI WIJAYA KUSUMA</h1>
+                    <h1 class="text-xl font-bold text-blue-900">TOKO DARMA WIYATA</h1>
                     <p class="text-sm text-gray-600">SMKN 1 BANYUWANGI</p>
                 </div>
             </div>
@@ -66,7 +86,7 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-4" id="desktop-menu">
                     <!-- Beranda -->
-                    <a href="index.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                    <a href="./index.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                         BERANDA
                     </a>
 
@@ -84,39 +104,31 @@
                             <ul class="py-2 text-sm font-normal text-gray-600 dark:text-black"
                                 aria-labelledby="dropdownLargeButton">
                                 <li>
-                                    <a href="product.html#buku" id="nextBuku"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">BUKU
-                                        TULIS</a>
-                                </li>
-                                <li>
-                                    <a href="product.html#tulis"
+                                    <a href="product.html#atk" id="nextBuku"
                                         class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ALAT
-                                        TULIS</a>
-                                </li>
-                                <li>
-                                    <a href="product.html#seragam"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">SERAGAM
-                                        SEKOLAH</a>
+                                        TULIS KANTOR</a>
                                 </li>
                                 <li>
                                     <a href="product.html#atribut"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ATRIBUT
-                                        SEKOLAH</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ALAT
+                                        ATRIBUT</a>
                                 </li>
                                 <li>
                                     <a href="product.html#konsumsi"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">KONSUMSI</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">SERAGAM
+                                        KONSUMSI</a>
                                 </li>
                                 <li>
-                                    <a href="product.html#merchandise"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">MERCHANDISE</a>
+                                    <a href="product.html#non"
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ATRIBUT
+                                        NON KONSUMSI</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- Profil -->
-                    <a href="#" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                    <a href="profil.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                         PROFIL
                     </a>
 
@@ -139,7 +151,7 @@
                                         KAMI</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="galery.html"
                                         class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">GALLERY</a>
                                 </li>
                             </ul>
@@ -205,21 +217,26 @@
                                     </svg>
                                 </button>
                                 <ul id="profil-dropdown" class="hidden pl-4 space-6">
-                                    <li><a href="product#buku" class="block py-2 hover:bg-gray-100">BUKU
-                                            PEMBELAJARAN</a></li>
-                                    <li><a href="product#tulis" class="block py-2 hover:bg-gray-100">ALAT TULIS</a></li>
-                                    <li><a href="product#seragam" class="block py-2 hover:bg-gray-100">SERAGAM
-                                            SEKOLAH</a></li>
-                                    <li><a href="product#atribut" class="block py-2 hover:bg-gray-100">ATRIBUT
-                                            SEKOLAH</a></li>
-                                    <li><a href="product#konsumsi" class="block py-2 hover:bg-gray-100">KONSUMSI</a>
+                                    <li>
+                                        <a href="product.html#atk" class="block py-2 hover:bg-gray-100">ALAT TULIS
+                                            KANTOR</a>
                                     </li>
-                                    <li><a href="product#merchandise"
-                                            class="block py-2 hover:bg-gray-100">MERCHANDISE</a></li>
+
+                                    <li>
+                                        <a href="product.html#atribut" class="block py-2 hover:bg-gray-100">ATRIBUT</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="product.html#konsumsi"
+                                            class="block py-2 hover:bg-gray-100">KONSUMSI</a>
+                                    </li>
+
+                                    <li><a href="product.html#non" class="block py-2 hover:bg-gray-100">NON KONSUMSI</a>
+                                    </li>
                                 </ul>
                             </li>
 
-                            <li><a href="index.html" class="block py-2 hover:bg-gray-100">PROFIL</a></li>
+                            <li><a href="profil.html" class="block py-2 hover:bg-gray-100">PROFIL</a></li>
 
                             <li>
                                 <button class="flex items-center w-full py-2 text-left hover:bg-gray-100"
@@ -233,7 +250,7 @@
                                 <ul id="produk-dropdown" class="hidden pl-4 space-y-2">
                                     <li><a href="kontak.html" class="block py-2 hover:bg-gray-100">KONTAK KAMI</a>
                                     </li>
-                                    <li><a href="" class="block py-2 hover:bg-gray-100">GALLERY</a>
+                                    <li><a href="galery.html" class="block py-2 hover:bg-gray-100">GALLERY</a>
                                     </li>
                                 </ul>
                             </li>
@@ -243,200 +260,135 @@
             </div>
         </div>
     </nav>
-
-    <!-- Sidebar -->
-    <div id="mobile-sidebar" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
-        <div class="bg-white w-64 h-full shadow-md">
-            <button id="close-sidebar" class="p-4 text-gray-700 hover:text-gray-900 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                </svg>
-            </button>
-            <ul class="mt-4 space-y-4 px-4 text-gray-800">
-                <li><a href="index.html" class="block py-2 hover:bg-gray-100">BERANDA</a></li>
-                <li>
-                    <button class="flex items-center w-full py-2 text-left hover:bg-gray-100"
-                        onclick="toggleDropdown('profil-dropdown')">
-                        PRODUK
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                    </button>
-                    <ul id="profil-dropdown" class="hidden pl-4 space-y-2">
-                        <li><a href="product#buku" class="block py-2 hover:bg-gray-100">BUKU PEMBELAJARAN</a></li>
-                        <li><a href="product#tulis" class="block py-2 hover:bg-gray-100">ALAT TULIS</a></li>
-                        <li><a href="product#seragam" class="block py-2 hover:bg-gray-100">SERAGAM SEKOLAH</a></li>
-                        <li><a href="product#atribut" class="block py-2 hover:bg-gray-100">ATRIBUT SEKOLAH</a></li>
-                        <li><a href="product#konsumsi" class="block py-2 hover:bg-gray-100">KONSUMSI</a></li>
-                        <li><a href="product#merchandise" class="block py-2 hover:bg-gray-100">MERCHANDISE</a></li>
-                    </ul>
-                </li>
-                <li><a href="" class="block py-2 hover:bg-gray-100">PROFIL</a></li>
-                <li>
-                    <button class="flex items-center w-full py-2 text-left hover:bg-gray-100"
-                        onclick="toggleDropdown('produk-dropdown')">
-                        LAINNYA
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                    </button>
-                    <ul id="produk-dropdown" class="hidden pl-4 space-y-6">
-                        <li><a href="kontak.html" class="block py-2 hover:bg-gray-100">KONTAK KAMI</a>
-                        </li>
-                        <li><a href="" class="block py-2 hover:bg-gray-100">GALLERY</a>
-                        </li>
-                    </ul>
-                </li> 
-            </ul>
-        </div>
-    </div>
     <!-- side bar end -->
 
 
-    <div class=" p-4 grid grid-cols-2 md:grid-cols-4 gap-4 ">
-        <div class="grid gap-4">
-            <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa 1.jpg" alt="">
+    <div class="container my-10 mx-auto p-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="grid gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa 1.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa2.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa13.jpg" alt="Gallery Image 3">
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa2.jpg" alt="">
+            <div class="grid gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa15.jpg" alt="Gallery Image 4">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa17.jpg" alt="Gallery Image 5">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa3.jpg" alt="Gallery Image 6">
+                </div>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa13.jpg" alt="">
+            <div class="grid gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa10.jpg" alt="Gallery Image 7">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa17.jpg" alt="Gallery Image 8">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa6.jpg" alt="Gallery Image 9">
+                </div>
             </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa15.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa17.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa3.jpg" alt="">
-            </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa10.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa17.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa6.jpg" alt="">
-            </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa4.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa11.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa12.jpg" alt="">
+            <div class="grid gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa4.jpg" alt="Gallery Image 10">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa11.jpg" alt="Gallery Image 11">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <img class="w-full h-auto object-cover" src="../Asset/tefa12.jpg" alt="Gallery Image 12">
+                </div>
             </div>
         </div>
     </div>
 
+
     <!-- Footer -->
-    <footer class="bg-gray-700 text-white">
-        <div class="container max-w-7xl mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-48">
+    <footer class="bg-[#152A38] text-white ">
+        <div class="container mx-auto px-4 py-8 md:py-12 flex justify-center">
+            <!-- Grid Container -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 ">
                 <!-- Tentang Kami -->
-                <div>
-                    <h2 class="text-lg font-bold text-blue-500 border-l-4 border-blue-500 pl-2">
+                <div class="mb-8 md:mb-0 max-w-sm ">
+                    <h2 class="text-lg font-bold text-blue-500 border-l-4 border-blue-500 pl-2 mb-4">
                         TENTANG KAMI
                     </h2>
-                    <div class="mt-4 flex items-center">
-                        <div class="ml-2">
-                            <h3 class="text-xl font-bold">
+                    <div class="flex items-start">
+                        <div>
+                            <h3 class="text-lg md:text-xl font-bold">
                                 KOPERASI WIJAYA KUSUMA
                             </h3>
-                            <p class="text-sm italic">
+                            <p class="text-sm italic mb-4">
                                 SMKN 1 BANYUWANGI
                             </p>
                         </div>
                     </div>
-                    <p class="mt-4">
+                    <p class="text-sm md:text-base">
                         Koperasi SMKN 1 Banyuwangi berkomitmen untuk melayani kebutuhan warga sekolah
                         dengan produk berkualitas dan harga terjangkau.
                     </p>
                 </div>
-                <!-- Jam Kerja koperasi -->
-                <div>
-                    <h2 class="text-lg font-bold text-blue-500 border-l-4 border-blue-500 pl-2">
+
+                <!-- Jam Kerja -->
+                <div class="mb-8 md:mb-0 max-w-sm">
+                    <h2 class="text-lg font-bold text-blue-500 border-l-4 border-blue-500 pl-2 mb-4">
                         JAM KERJA
                     </h2>
-                    <p class="mt-4">
+                    <p class="text-sm md:text-base mb-4">
                         Kami bekerja 5 hari dalam seminggu. Hubungi kami jika anda memerlukan bantuan dengan menghubungi
                         kontak di bawah ini.
                     </p>
-                    <ul class="mt-4">
-                        <li>
-                            Senin - Jumat:
-                            <span class="float-right">
-                                06:30 - 16:00
-                            </span>
+                    <ul class="space-y-3 text-sm md:text-base">
+                        <li class="flex justify-between items-center">
+                            <span>Senin - Jumat:</span>
+                            <span>07:00 - 14:00</span>
                         </li>
-                        <li>
-                            Sabtu:
-                            <span class="float-right">
-                                08:00 - 12:00
-                            </span>
-                        </li>
-                        <li>
-                            Minggu dan hari libur lainnya:
-                            <span class="float-right">
-                                Tutup
-                            </span>
+                        <li class="flex justify-between items-center">
+                            <span>Sabtu & Minggu dan hari libur lainnya:</span>
+                            <span>Tutup</span>
                         </li>
                     </ul>
                 </div>
-                <!-- Layanan Section -->
-                <div>
-                    <h2 class="text-lg font-bold text-blue-500 border-l-4 border-blue-500 pl-2">
+
+                <!-- Layanan -->
+                <div class="max-w-sm">
+                    <h2 class="text-lg font-bold text-blue-500 border-l-4 border-blue-500 pl-2 mb-4">
                         LAYANAN
                     </h2>
-                    <ul class="mt-4 space-y-2">
-                        <li>
-                            Layanan Konsumsi
-                        </li>
-                        <li>
-                            Layanan Produksi
-                        </li>
-                        <li>
-                            Layanan Pemasaran
-                        </li>
+                    <ul class="space-y-3 text-sm md:text-base">
+                        <li>Layanan Konsumsi</li>
+                        <li>Layanan Produksi</li>
+                        <li>Layanan Pemasaran</li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <!-- Copyright -->
         <div class="bg-blue-600 py-4">
-            <div class="container mx-auto flex flex-col md:flex-row justify-center items-center px-4">
-                <p class="text-sm mb-4 md:mb-0">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-sm">
                     Copyright © 2024 , Developed by Masben
                 </p>
             </div>
         </div>
     </footer>
 
+    <script src="js/gambar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/kontak.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 
 </body>

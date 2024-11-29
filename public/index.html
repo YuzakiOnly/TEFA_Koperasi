@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toko Darma Wiyata</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../Asset/koperasilogo.png">
     <script src="https://cdn.tailwindcss.com">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <style>
     body {
@@ -123,7 +128,7 @@
                     </div>
 
                     <!-- Profil -->
-                    <a href="#" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                    <a href="profil.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                         PROFIL
                     </a>
 
@@ -146,7 +151,7 @@
                                         KAMI</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="galery.html"
                                         class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">GALLERY</a>
                                 </li>
                             </ul>
@@ -201,7 +206,7 @@
                             </svg>
                         </button>
                         <ul class="mt-4 space-y-4 px-4 text-gray-800">
-                            <li><a href="" class="block py-2 hover:bg-gray-100">BERANDA</a></li>
+                            <li><a href="index.html" class="block py-2 hover:bg-gray-100">BERANDA</a></li>
                             <li>
                                 <button class="flex items-center w-full py-2 text-left hover:bg-gray-100"
                                     onclick="toggleDropdown('profil-dropdown')">
@@ -231,7 +236,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="index.html" class="block py-2 hover:bg-gray-100">PROFIL</a></li>
+                            <li><a href="profil.html" class="block py-2 hover:bg-gray-100">PROFIL</a></li>
 
                             <li>
                                 <button class="flex items-center w-full py-2 text-left hover:bg-gray-100"
@@ -245,7 +250,7 @@
                                 <ul id="produk-dropdown" class="hidden pl-4 space-y-2">
                                     <li><a href="kontak.html" class="block py-2 hover:bg-gray-100">KONTAK KAMI</a>
                                     </li>
-                                    <li><a href="" class="block py-2 hover:bg-gray-100">GALLERY</a>
+                                    <li><a href="galery.html" class="block py-2 hover:bg-gray-100">GALLERY</a>
                                     </li>
                                 </ul>
                             </li>
@@ -279,8 +284,8 @@
                             d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
                 </a>
-                <a href=""
-                    class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                <a href="profil.html#galang"
+                    class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border">
                     Tentang Kami
                 </a>
             </div>
@@ -345,7 +350,7 @@
 
     <div class="mt-[20px] mb-[100px] my-0">
         <h2 class="text-center text-3xl font-semibold text-gray-700 mb-4">Tentang Kami</h2>
-        <div class="overflow-hidden max-w-7xl mx-auto my-10 bg-white sm:grid sm:grid-cols-2">
+        <div class="overflow-hidden max-w-7xl mx-auto my-10 shadow-xl bg-white sm:grid sm:grid-cols-2">
             <div class="p-8 md:p-12 lg:px-16 lg:py-24">
                 <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
                     <h2 class="text-left mb-10 text-2xl font-bold text-gray-900 md:text-3xl">
@@ -359,7 +364,7 @@
                     </p>
 
                     <div class="mt-8 md:mt-8">
-                        <a href=""
+                        <a href="profil.html#galang"
                             class="inline-block rounded w-full bg-blue-600 hover:bg-blue-800 px-12 py-3 text-sm font-medium text-white transition">
                             Baca Selengkapnya
                         </a>

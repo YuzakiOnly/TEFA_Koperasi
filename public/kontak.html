@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toko Darma Wiyata</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../Asset/koperasilogo.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
@@ -19,6 +20,7 @@
     body {
         font-family: 'Outfit', sans-serif;
     }
+
     #mobile-sidebar ul {
         transition: all 0.3s ease-in-out;
     }
@@ -33,13 +35,16 @@
                 <span>Jl. Wijaya Kusuma No.46, Mojopanggung, Giri</span>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="https://www.facebook.com/SMKN1BANYUWANGI.SCH/" class="text-gray-600 hover:text-blue-600 transition-colors">
+                <a href="https://www.facebook.com/SMKN1BANYUWANGI.SCH/"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
                     <i data-feather="facebook" class="w-4 h-4"></i>
                 </a>
-                <a href="https://www.instagram.com/smkn1banyuwangi.sch/?hl=en" class="text-gray-600 hover:text-blue-600 transition-colors">
+                <a href="https://www.instagram.com/smkn1banyuwangi.sch/?hl=en"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
                     <i data-feather="instagram" class="w-4 h-4"></i>
                 </a>
-                <a href="https://www.youtube.com/@OFFICIALSMKN1BANYUWANGI" class="text-gray-600 hover:text-blue-600 transition-colors">
+                <a href="https://www.youtube.com/@OFFICIALSMKN1BANYUWANGI"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
                     <i data-feather="youtube" class="w-4 h-4"></i>
                 </a>
             </div>
@@ -78,7 +83,7 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-4" id="desktop-menu">
                     <!-- Beranda -->
-                    <a href="./index.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                    <a href="index.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                         BERANDA
                     </a>
 
@@ -97,7 +102,8 @@
                                 aria-labelledby="dropdownLargeButton">
                                 <li>
                                     <a href="product.html#atk" id="nextBuku"
-                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ALAT TULIS KANTOR</a>
+                                        class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">ALAT
+                                        TULIS KANTOR</a>
                                 </li>
                                 <li>
                                     <a href="product.html#atribut"
@@ -119,7 +125,7 @@
                     </div>
 
                     <!-- Profil -->
-                    <a href="#" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+                    <a href="profil.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                         PROFIL
                     </a>
 
@@ -142,7 +148,7 @@
                                         KAMI</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="galery.html"
                                         class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">GALLERY</a>
                                 </li>
                             </ul>
@@ -197,7 +203,7 @@
                             </svg>
                         </button>
                         <ul class="mt-4 space-y-4 px-4 text-gray-800">
-                            <li><a href="" class="block py-2 hover:bg-gray-100">BERANDA</a></li>
+                            <li><a href="index.html" class="block py-2 hover:bg-gray-100">BERANDA</a></li>
                             <li>
                                 <button class="flex items-center w-full py-2 text-left hover:bg-gray-100"
                                     onclick="toggleDropdown('profil-dropdown')">
@@ -209,7 +215,8 @@
                                 </button>
                                 <ul id="profil-dropdown" class="hidden pl-4 space-6">
                                     <li>
-                                        <a href="product.html#atk" class="block py-2 hover:bg-gray-100">ALAT TULIS KANTOR</a>
+                                        <a href="product.html#atk" class="block py-2 hover:bg-gray-100">ALAT TULIS
+                                            KANTOR</a>
                                     </li>
 
                                     <li>
@@ -217,7 +224,8 @@
                                     </li>
 
                                     <li>
-                                        <a href="product.html#konsumsi" class="block py-2 hover:bg-gray-100">KONSUMSI</a>
+                                        <a href="product.html#konsumsi"
+                                            class="block py-2 hover:bg-gray-100">KONSUMSI</a>
                                     </li>
 
                                     <li><a href="product.html#non" class="block py-2 hover:bg-gray-100">NON KONSUMSI</a>
@@ -225,7 +233,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="index.html" class="block py-2 hover:bg-gray-100">PROFIL</a></li>
+                            <li><a href="profil.html" class="block py-2 hover:bg-gray-100">PROFIL</a></li>
 
                             <li>
                                 <button class="flex items-center w-full py-2 text-left hover:bg-gray-100"
@@ -239,7 +247,7 @@
                                 <ul id="produk-dropdown" class="hidden pl-4 space-y-2">
                                     <li><a href="kontak.html" class="block py-2 hover:bg-gray-100">KONTAK KAMI</a>
                                     </li>
-                                    <li><a href="" class="block py-2 hover:bg-gray-100">GALLERY</a>
+                                    <li><a href="galery.html" class="block py-2 hover:bg-gray-100">GALLERY</a>
                                     </li>
                                 </ul>
                             </li>
@@ -250,7 +258,7 @@
         </div>
     </nav>
     <!-- side bar end -->
-    
+
     <!-- Container -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div class="max-w-7xl mx-auto">
@@ -270,7 +278,9 @@
                         </p>
                     </div>
 
-                    <form action="https://script.google.com/macros/s/AKfycbx5JB8etreQPyINd7BDne4m-VFAZdIwSM2wMS9RWffB3LvYqOwhzmb-eA-KmfQPgZqm/exec" method="post" class="space-y-6" name="contact-form" id="contact-form">
+                    <form
+                        action="https://script.google.com/macros/s/AKfycbx5JB8etreQPyINd7BDne4m-VFAZdIwSM2wMS9RWffB3LvYqOwhzmb-eA-KmfQPgZqm/exec"
+                        method="post" class="space-y-6" name="contact-form" id="contact-form">
                         <!-- Name Input -->
                         <div class="space-y-2">
                             <label for="name" class="text-sm font-medium text-gray-700">Nama Anda</label>
@@ -286,7 +296,7 @@
                             <input type="tel" id="your-number" name="No-telpon"
                                 placeholder="Masukkan nomor telepon Anda" pattern="[0-9]+" required inputmode="numeric"
                                 onkeypress="return event.charCode >= 48 && event.charCode <= 57" onpaste="return false"
-                                class="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all text-sm sm:text-base" >
+                                class="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all text-sm sm:text-base">
                             <p id="phone-error" class="text-blue-500 text-sm hidden">
                                 Harap masukkan hanya angka
                             </p>
@@ -295,8 +305,7 @@
                         <!-- Email Input -->
                         <div class="space-y-2">
                             <label for="email" class="text-sm font-medium text-gray-700">Email Anda</label>
-                            <input type="email" id="your-email" name="Email" placeholder="Masukkan email kamu"
-                                required
+                            <input type="email" id="your-email" name="Email" placeholder="Masukkan email kamu" required
                                 class="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all text-sm sm:text-base" />
                         </div>
 
@@ -392,6 +401,7 @@
     <script src="js/main.js"></script>
     <script src="js/kontak.js"></script>
     <script src="js/menu.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>
 
 </html>

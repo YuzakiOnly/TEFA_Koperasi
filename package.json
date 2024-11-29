@@ -15,5 +15,8 @@
   "description": "",
   "devDependencies": {
     "tailwindcss": "^3.4.15"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3"
   }
 }
