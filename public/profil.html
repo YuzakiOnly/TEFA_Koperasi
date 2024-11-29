@@ -4,16 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+
 </head>
 
+<style>
+    body {
+        font-family: 'Outfit', sans-serif;
+    }
+
+    #mobile-sidebar ul {
+        transition: all 0.3s ease-in-out;
+    }
+</style>
+
 <body>
-    <!-- Top Info Bar -->
     <div class="w-full hidden md:flex bg-gray-100 py-2 px-4">
         <div class="container max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center text-gray-600 text-sm">
@@ -34,7 +44,7 @@
         </div>
     </div>
 
-    <!-- Header with Logo -->
+
     <div class="bg-white text-gray-800 py-4 px-4">
         <div class="container max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-4">
@@ -59,18 +69,18 @@
         </div>
     </div>
 
-    <!-- Navigation Bar -->
+
     <nav class="bg-blue-700 text-white sticky top-0 z-50">
         <div class="container max-w-7xl mx-auto px-4">
             <div class="flex items-center justify-between h-16">
-                <!-- Desktop Navigation -->
+
                 <div class="hidden md:flex items-center space-x-4" id="desktop-menu">
-                    <!-- Beranda -->
+
                     <a href="index.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                         BERANDA
                     </a>
 
-                    <!-- Produk Dropdown -->
+
                     <div class="relative group">
                         <button class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                             <a href="product.html">PRODUK</a>
@@ -115,12 +125,12 @@
                         </div>
                     </div>
 
-                    <!-- Profil -->
-                    <a href="#" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
+
+                    <a href="profil.html" class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                         PROFIL
                     </a>
 
-                    <!-- Lainnya Kotak Kami Dan Gallery -->
+
                     <div class="relative group">
                         <button class="inline-flex items-center px-3 py-2 transition-colors duration-200">
                             LAINNYA
@@ -139,7 +149,7 @@
                                         KAMI</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="galery.html"
                                         class="block px-4 py-2 hover:bg-blue-700 hover:text-white dark:hover:text-white">GALLERY</a>
                                 </li>
                             </ul>
@@ -147,9 +157,9 @@
                     </div>
                 </div>
 
-                <!-- Search Bar -->
+
                 <div class="items-center space-x-4 flex ml-auto">
-                    <!-- Search Icon -->
+
                     <div class="relative">
                         <button id="search-toggle" class="text-white hover:text-blue-200 transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,7 +168,7 @@
                             </svg>
                         </button>
 
-                        <!-- Search Popup -->
+
                         <div id="search-popup"
                             class="hidden absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg z-50 p-4">
                             <div class="relative">
@@ -174,7 +184,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Hamburger Button -->
+
                     <button id="hamburger-menu" class="md:hidden text-white focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -183,7 +193,7 @@
                     </button>
                 </div>
 
-                <!-- Sidebar -->
+
                 <div id="mobile-sidebar" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
                     <div class="bg-white w-64 h-full shadow-md">
                         <button id="close-sidebar" class="p-4 text-gray-700 hover:text-gray-900 focus:outline-none">
@@ -233,7 +243,7 @@
                                 <ul id="produk-dropdown" class="hidden pl-4 space-y-2">
                                     <li><a href="kontak.html" class="block py-2 hover:bg-gray-100">KONTAK KAMI</a>
                                     </li>
-                                    <li><a href="" class="block py-2 hover:bg-gray-100">GALLERY</a>
+                                    <li><a href="galery.html" class="block py-2 hover:bg-gray-100">GALLERY</a>
                                     </li>
                                 </ul>
                             </li>
@@ -244,7 +254,7 @@
         </div>
     </nav>
 
-    <!-- Sidebar -->
+
     <div id="mobile-sidebar" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
         <div class="bg-white w-64 h-full shadow-md">
             <button id="close-sidebar" class="p-4 text-gray-700 hover:text-gray-900 focus:outline-none">
@@ -289,68 +299,162 @@
                         <li><a href="" class="block py-2 hover:bg-gray-100">GALLERY</a>
                         </li>
                     </ul>
-                </li> 
+                </li>
             </ul>
         </div>
     </div>
     <!-- side bar end -->
 
+    <div class="relative">
+        <img src="../Asset/tefa9.jpg" alt="Gambar" class="w-full object-cover" style="height: 500px;">
+        <div class="absolute inset-0 flex items-center justify-center text-gray-700 text-6xl font-bold">
+            Koperasi Wijaya
+        </div>
+    </div>
 
-    <div class=" p-4 grid grid-cols-2 md:grid-cols-4 gap-4 ">
-        <div class="grid gap-4">
-            <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa 1.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa2.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa13.jpg" alt="">
-            </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa15.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa17.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa3.jpg" alt="">
+    <div class="text-center text-3xl font-bold mt-5">
+        <P>KETUA </P>
+    </div>
+
+    <div class="flex items-center justify-center ">
+        <div
+            class="justify-center content-center mt-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex flex-col justify-center items-center p-5">
+                <a href="#">
+                    <img class="rounded-t-lg mb-5" src="../Asset/hijab2.png" alt="">
+                </a>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    ANDI SEHA S.Pd
+                </a>
             </div>
         </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa10.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa17.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa6.jpg" alt="">
+    </div>
+
+    <div class="text-center text-3xl font-bold mt-5">
+        <P>Staf Kariawan</P>
+    </div>
+    
+
+    <div class=" px-8 grid grid-cols-2 md:grid-cols-4 gap-4 ">
+        <div
+            class=" mt-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+            <div class="flex flex-col justify-center items-center p-5">
+                <a href="#">
+                    <img class="rounded-t-lg mb-5  " src="../Asset/hijab2.png" alt="">
+                </a>
+                <a href="#"
+                    class=" inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    IRMA NUR A. Y. S.Pd Gr
+                </a>
             </div>
         </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa4.jpg" alt="">
+        <div
+            class=" mt-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+            <div class="flex flex-col justify-center items-center p-5">
+                <a href="#">
+                    <img class="rounded-t-lg mb-5  " src="../Asset/hijab2.png" alt="">
+                </a>
+                <a href="#"
+                    class=" inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    SITI FATMAWATI
+                </a>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa11.jpg" alt="">
+        </div>
+        <div
+            class=" mt-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+            <div class="flex flex-col justify-center items-center p-5">
+                <a href="#">
+                    <img class="rounded-t-lg mb-5  " src="../Asset/hijab2.png" alt="">
+                </a>
+                <a href="#"
+                    class=" inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    SITI HAJIJAH
+                </a>
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg"
-                    src="../Asset/tefa12.jpg" alt="">
+        </div>
+        <div
+            class=" mt-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+            <div class="flex flex-col justify-center items-center p-5">
+                <a href="#">
+                    <img class="rounded-t-lg mb-5  " src="../Asset/kantor2.png" alt="">
+                </a>
+                <a href="#"
+                    class=" inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    M. NURKHOLIS, S.Pd Gr
+                </a>
+            </div>
+        </div>
+        <div
+            class=" mt-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+            <div class="flex flex-col justify-center items-center p-5">
+                <a href="#">
+                    <img class="rounded-t-lg mb-5  " src="../Asset/hijab2.png" alt="">
+                </a>
+                <a href="#"
+                    class=" inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    ANY PUJI ASTUTI S.E
+                </a>
+            </div>
+        </div>
+        <div
+            class=" mt-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+            <div class="flex flex-col justify-center items-center p-5">
+                <a href="#">
+                    <img class="rounded-t-lg mb-5  " src="../Asset/hijab2.png" alt="">
+                </a>
+                <a href="#"
+                    class=" inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    ANGGUN SETYANINGTYAS, S.Pd
+                </a>
+            </div>
+        </div>
+        <div
+            class=" mt-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+            <div class="flex flex-col justify-center items-center p-5">
+                <a href="#">
+                    <img class="rounded-t-lg mb-5  " src="../Asset/kantor2.png" alt="">
+                </a>
+                <a href="#"
+                    class=" inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    unknown?
+                </a>
+            </div>
+        </div>
+        <div
+            class=" mt-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+            <div class="flex flex-col justify-center items-center p-5">
+                <a href="#">
+                    <img class="rounded-t-lg mb-5  " src="../Asset/kantor2.png" alt="">
+                </a>
+                <a href="#"
+                    class=" inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    unknown?
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class=" mt-8 mb-8 text-center text-2xl font-bold">
+        <a>Koperasi Wijaya</a>
+    </div>
+    <div class=" bg-gray-300 my-7">
+        <div class="flex flex-col md:flex-row items-center gap-6 p-4">
+            <div class="text-center md:w-1/2">
+                <p class="text-black mb-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, modi ipsum! Commodi dolorem sed
+                    corporis
+                    totam repellendus ducimus aut velit id consequuntur. Nulla vero eius debitis ipsa provident nobis
+                    adipisci
+                </p>
+                <button
+                    class=" px-4 py-2 bg-blue-800 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    lihat lebih banyak
+                </button>
+            </div>
+            <div class="md:w-1/2">
+                <img src="../Asset/cihuy.jpg" alt="Deskripsi Gambar"
+                    class="w-full h-auto rounded shadow-lg object-cover">
             </div>
         </div>
     </div>
@@ -437,8 +541,8 @@
         </div>
     </footer>
 
+    <script src="main.js"></script>
 
 
 </body>
-
 </html>
